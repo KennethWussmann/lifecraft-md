@@ -1,0 +1,20 @@
+name: publish
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./.github/actions/pnpm-install
+      - name: Extract tag version
+        id: get_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+      - run: pnpm build
+      - name: Publishing CLI
+        run: yarn publish --new-version ${{ steps.get_version.outputs.VERSION }} --frozen-lockfile --no-git-tag-version
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

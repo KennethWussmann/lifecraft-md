@@ -38,16 +38,14 @@
     "oclif"
   ],
   "license": "MIT",
-  "main": "lib/index.js",
+  "main": "bin/index.js",
   "oclif": {
     "bin": "lifecraft-md"
   },
   "repository": "KennethWussmann/lifecraft-to-markdown-converter",
   "scripts": {
     "format": "prettier --write .",
-    "prepack": "rm -rf lib && tsc -b && oclif-dev readme",
-    "test": "echo NO TESTS",
-    "version": "oclif-dev readme && git add README.md",
+    "build": "rm -rf lib/ && tsc -b",
     "dev": "./bin/run"
   },
   "types": "lib/index.d.ts"

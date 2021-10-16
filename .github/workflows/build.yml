@@ -1,0 +1,12 @@
+name: build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./.github/actions/pnpm-install
+      - run: pnpm prettier . --check
+      - run: pnpm build

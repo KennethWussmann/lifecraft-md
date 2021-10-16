@@ -8,27 +8,25 @@ Convert Lifecraft exports to markdown files
 [![License](https://img.shields.io/npm/l/lifecraft-to-markdown-converter.svg)](https://github.com/KennethWussmann/lifecraft-to-markdown-converter/blob/master/package.json)
 
 <!-- toc -->
-
-- [Usage](#usage)
-- [Commands](#commands)
+* [lifecraft-to-markdown-converter](#lifecraft-to-markdown-converter)
+* [Usage](#usage)
+* [Commands](#commands)
 <!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
-
 ```sh-session
 $ npm install -g lifecraft-to-markdown-converter
 $ lifecraft-md COMMAND
 running command...
 $ lifecraft-md (-v|--version|version)
-lifecraft-to-markdown-converter/0.1.0 darwin-arm64 node-v16.3.0
+lifecraft-to-markdown-converter/0.1.0 darwin-arm64 node-v14.18.1
 $ lifecraft-md --help [COMMAND]
 USAGE
   $ lifecraft-md COMMAND
 ...
 ```
-
 <!-- usagestop -->
 
 # Commands

@@ -1,0 +1,6 @@
+.github/
+src/
+.editorconfig
+.prettierignore
+tsconfig.json
+tmp

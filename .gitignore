@@ -8,3 +8,6 @@
 node_modules
 *.lifecraftex
 out/
+bin/*.js
+bin/*.map
+.DS_Store
