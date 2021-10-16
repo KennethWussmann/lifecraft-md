@@ -1,12 +1,12 @@
 {
-  "name": "lifecraft-to-markdown-converter",
+  "name": "lifecraft-md",
   "description": "Convert Lifecraft exports to markdown files",
   "version": "0.1.0",
   "author": "Kenneth Wußmann @KennethWussmann",
   "bin": {
     "lifecraft-md": "./bin/run"
   },
-  "bugs": "https://github.com/KennethWussmann/lifecraft-to-markdown-converter/issues",
+  "bugs": "https://github.com/KennethWussmann/lifecraft-md/issues",
   "dependencies": {
     "@oclif/command": "^1.8.0",
     "@oclif/config": "^1.17.0",
@@ -33,7 +33,7 @@
     "/bin",
     "/lib"
   ],
-  "homepage": "https://github.com/KennethWussmann/lifecraft-to-markdown-converter",
+  "homepage": "https://github.com/KennethWussmann/lifecraft-md",
   "keywords": [
     "oclif"
   ],
@@ -42,7 +42,7 @@
   "oclif": {
     "bin": "lifecraft-md"
   },
-  "repository": "KennethWussmann/lifecraft-to-markdown-converter",
+  "repository": "KennethWussmann/lifecraft-md",
   "scripts": {
     "format": "prettier --write .",
     "build": "rm -rf lib/ && tsc -b",

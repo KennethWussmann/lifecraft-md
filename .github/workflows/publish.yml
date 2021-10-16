@@ -14,7 +14,8 @@ jobs:
         id: get_version
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
       - run: pnpm build
+      - run: npm version --no-git-tag-version ${{ steps.get_version.outputs.VERSION }}
       - name: Publishing CLI
-        run: yarn publish --new-version ${{ steps.get_version.outputs.VERSION }} --frozen-lockfile --no-git-tag-version
+        run: pnpm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
