@@ -2,7 +2,7 @@
 
 Convert Lifecraft exports to markdown files
 
-# Usage
+## Usage
 
 ```sh
 npm install -g lifecraft-md
@@ -14,7 +14,7 @@ Convert a `.lifecraftex` export to markdown:
 lifecraft-md my-export.lifecraftex
 ```
 
-# Advanced usage
+## Advanced usage
 
 ```
 Convert Lifecraft exports to markdown files
@@ -33,3 +33,7 @@ OPTIONS
   -o, --outdir=outdir  [default: out/] Output directory of conversion result
   -v, --version        show CLI version
 ```
+
+## Disclaimer
+
+`lifecraft-md` is by no means feature-complete to convert every bit from Lifecraft but is rather a good headstart over copy and pasting every exported entry into markdown files manually.
