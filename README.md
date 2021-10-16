@@ -1,5 +1,4 @@
-lifecraft-to-markdown-converter
-===============================
+# lifecraft-to-markdown-converter
 
 Convert Lifecraft exports to markdown files
 
@@ -9,11 +8,15 @@ Convert Lifecraft exports to markdown files
 [![License](https://img.shields.io/npm/l/lifecraft-to-markdown-converter.svg)](https://github.com/KennethWussmann/lifecraft-to-markdown-converter/blob/master/package.json)
 
 <!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
+
+- [Usage](#usage)
+- [Commands](#commands)
 <!-- tocstop -->
+
 # Usage
+
 <!-- usage -->
+
 ```sh-session
 $ npm install -g lifecraft-to-markdown-converter
 $ lifecraft-md COMMAND
@@ -25,8 +28,11 @@ USAGE
   $ lifecraft-md COMMAND
 ...
 ```
+
 <!-- usagestop -->
+
 # Commands
+
 <!-- commands -->
 
 <!-- commandsstop -->

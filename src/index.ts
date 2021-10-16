@@ -1,29 +1,61 @@
-import {Command, flags} from '@oclif/command'
+import { join } from "path";
+import { Command, flags } from "@oclif/command";
+import glob from "glob";
+import { ConvertService } from "./convertService";
 
 class LifecraftToMarkdownConverter extends Command {
-  static description = 'describe the command here'
+  static description = "Convert Lifecraft exports to markdown files";
 
   static flags = {
-    // add --version flag to show CLI version
-    version: flags.version({char: 'v'}),
-    help: flags.help({char: 'h'}),
-    // flag with a value (-n, --name=VALUE)
-    name: flags.string({char: 'n', description: 'name to print'}),
-    // flag with no value (-f, --force)
-    force: flags.boolean({char: 'f'}),
-  }
+    version: flags.version({ char: "v" }),
+    help: flags.help({ char: "h", description: "Show usage" }),
+    outdir: flags.string({
+      char: "o",
+      default: "out/",
+      description: "Output directory of conversion result",
+    }),
+    metadata: flags.boolean({
+      char: "m",
+      default: false,
+      description: "Prepend entry metadata as YAML before markdown",
+    }),
+    flatten: flags.boolean({
+      char: "f",
+      default: false,
+      description: "Flatten the metadata",
+    }),
+    embed: flags.boolean({
+      char: "e",
+      default: true,
+      description: "Embed attachments as images in markdown",
+      allowNo: true,
+    }),
+  };
 
-  static args = [{name: 'file'}]
+  static args = [
+    {
+      name: "export",
+      required: false,
+      description: "Lifecraft export file in .lifecraftex format",
+    },
+  ];
 
-  async run() {
-    const {args, flags} = this.parse(LifecraftToMarkdownConverter)
-
-    const name = flags.name ?? 'world'
-    this.log(`hello ${name} from ./src/index.ts`)
-    if (args.file && flags.force) {
-      this.log(`you input --force and --file: ${args.file}`)
+  run = async () => {
+    const { args, flags } = this.parse(LifecraftToMarkdownConverter);
+    if (!args.export) {
+      console.error("No export given.");
+      process.exit(1);
     }
-  }
+
+    await new ConvertService(
+      args.export,
+      flags.outdir,
+      flags.metadata,
+      flags.flatten,
+      flags.embed
+    ).convert();
+    console.log("Done!");
+  };
 }
 
-export = LifecraftToMarkdownConverter
+export = LifecraftToMarkdownConverter;
