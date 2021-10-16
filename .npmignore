@@ -4,3 +4,5 @@ src/
 .prettierignore
 tsconfig.json
 tmp
+*.lifecraftex
+out/
