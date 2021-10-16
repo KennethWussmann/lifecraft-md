@@ -3,11 +3,12 @@
 Convert Lifecraft exports to markdown files
 
 ## Features
-* Convert `.lifecraftex` exports to dated markdown files
-* Add entry metadata as YAML on top of markdown files (Jekyll-like)
-* Flatten metadata only to the important informations
-* Move attachments to folder of entry
-* Embed images in markdown files 
+
+- Convert `.lifecraftex` exports to dated markdown files
+- Add entry metadata as YAML on top of markdown files (Jekyll-like)
+- Flatten metadata only to the important informations
+- Move attachments to folder of entry
+- Embed images in markdown files
 
 ## Usage
 
