@@ -8,5 +8,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/pnpm-install
-      - run: pnpm prettier . --check
+      - run: pnpm format:check
       - run: pnpm build
